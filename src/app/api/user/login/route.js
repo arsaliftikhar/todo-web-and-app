@@ -38,6 +38,7 @@ export async function POST(req) {
       status: 'success',
       message: 'Logged in successfully',
       user: userData,
+      token
     })
 
     // Set HttpOnly cookie
