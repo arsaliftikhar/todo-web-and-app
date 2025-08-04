@@ -23,7 +23,7 @@ export async function POST(req) {
 
     // Validate password
     if (!password) throw new Error('Password is required');
-    if (password.length < 8) throw new Error('Minimum 8 characters password required');
+    if (password.length < 6) throw new Error('Minimum 8 characters password required');
 
 
     // Hash password

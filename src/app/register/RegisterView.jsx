@@ -41,19 +41,6 @@ export default function RegisterView() {
       return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      toast.error("Please enter a valid email address.");
-      setBtnIsLoading(false);
-      return;
-    }
-
-    if (password.length < 6) {
-      toast.error("Password must be at least 6 characters.");
-      setBtnIsLoading(false);
-      return;
-    }
-
     try {
       await register(email, password);
       await loadUser();
